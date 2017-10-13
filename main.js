@@ -37,11 +37,13 @@ console.log ('arrayMax',getMaxValue(array5));
 
 //sum
 function arraySum(array){
-var sum = 0;
-for(var i = 0; i < array.length; i++){
-    sum += array[i];
+  var sum = 0;
+  for(var i = 0; i < array.length; i++) {
+    if (!isNaN(array[i]) && typeof array[i] === "number") {
+      sum += array[i];
     }
-return sum;
+  }
+  return sum;
 }
 console.log('arraySum', arraySum( array1));
 console.log('arraySum', arraySum( array2));
